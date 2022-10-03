@@ -1,3 +1,5 @@
 /src_rust/util/target
 /src_rust/util/Cargo.lock
 /src_rust/util/.devcontainer
+/src_rust/src01/target
+/src_rust/src01/Cargo.lock
