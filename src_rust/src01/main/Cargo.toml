@@ -1,11 +1,12 @@
 [package]
-name = "util"
+name = "main"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+util = { path = "../util" }
 tch = "0.5.0"
 anyhow = "1.0.38"
 csv = "1.1.6"
