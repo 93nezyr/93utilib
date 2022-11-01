@@ -47,6 +47,21 @@ pub fn tensor_to_csv(tensor: &Tensor, path: String) -> Result<()> {
     Ok(())
 }
 
+pub fn csv_to_tensor(path: String) -> Result<Tensor> {
+    let mut rdr = csv::Reader::from_path(&path)?;
+    let mut v = Vec::new();
+    for result in rdr.records() {
+        let record = result?;
+        let mut row = Vec::new();
+        for field in record.iter() {
+            row.push(field.parse::<f64>()?);
+        }
+        v.push(row);
+    }
+    let t = Tensor::of_slice2(v.as_slice()).to_kind(tch::Kind::Float);
+    Ok(t)
+}
+
 #[cfg(test)]
 mod test {
     use super::*;
@@ -57,5 +72,11 @@ mod test {
         let t = Tensor::of_slice2(v.as_slice());
         t.print();
         tensor_to_csv(&t, "/workspaces/src01/test.csv".to_string()).unwrap();
+    }
+
+    #[test]
+    fn test_csv_to_tensor() {
+        let t = csv_to_tensor("/workspaces/src01/test.csv".to_string()).unwrap();
+        t.print();
     }
 }
