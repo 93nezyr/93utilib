@@ -3,4 +3,5 @@
 members = [
     "util",
     "main",
+    "simlib",
 ]
