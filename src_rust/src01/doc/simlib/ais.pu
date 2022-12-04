@@ -1,0 +1,7 @@
+@startuml ais.rs
+
+class Thinker {
+    
+}
+
+@enduml
