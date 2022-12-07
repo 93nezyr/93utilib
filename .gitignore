@@ -5,3 +5,6 @@
 /src_rust/src01/Cargo.lock
 /src_rust/src01/.devcontainer
 /src_py/src01/.devcontainer
+/src_rust/src02/Cargo.lock
+/src_rust/src02/.devcontainer
+/src_rust/src02/target

@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "cli",
+    "aogr_base",
+]
