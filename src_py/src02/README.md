@@ -7,3 +7,19 @@
 - 上記AIの学習フレームワーク
 
 を提供します.
+
+## 開発環境
+
+- Python 3.9.14
+
+## 環境構築
+
+実行したコマンドをいかに示します.
+
+```bash
+sudo pip install --upgrade pip
+```
+
+```bash
+sudo pip install torch
+```
