@@ -1,0 +1,12 @@
+@startuml overview
+
+participant Trainer
+participant Model
+
+autoactivate on
+autonumber
+
+Trainer -> Model : train()
+return
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml train
+
+participant Main
+participant Trainer
+participant Model
+
+autoactivate on
+autonumber
+
+Main -> Trainer #Blue : train()
+
+Trainer -> Trainer #Aqua : create_train_data()
+
+return Data
+
+Trainer -> Trainer #Aqua : train_model()
+
+Trainer -> Model #Green : train()
+
+return Result
+
+return Result
+
+return Result
+
+@enduml
